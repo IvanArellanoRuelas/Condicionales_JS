@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Condicionales</title>
+    <link rel="stylesheet" href="./Assets/CSS/Style.css" />
+  </head>
+  <body>
+    <!---Ejercicio Numero 1-->
+    <h1>Ejercicio 1:</h1>
+    <div id="Ejericio1">
+      <img src="./Assets/IMGS/Imagen1.jpg" id="Imagen1" />
+      <button
+        onclick="
+      Imagen_ = document.querySelector('#Imagen1')
+      if (Imagen_.style.border === 'none'){
+        Imagen_.style.border = '2px solid red'
+      }else{
+        Imagen_.style.border = 'none'
+      } 
+    "
+      >
+        Borde
+      </button>
+    </div>
+    <!---Ejercicio Numero 2-->
+    <h1>Ejercicio 2:</h1>
+    <div id="Ejericio2">
+      <div id="Card">
+        <img src="./Assets/IMGS/Animal1.jpg" id="Imagen2" />
+        <input type="text" id="Valor1" />
+      </div>
+      <div id="Card">
+        <img src="./Assets/IMGS/Animal2.jpg" id="Imagen2" />
+        <input type="text" id="Valor2" />
+      </div>
+      <div id="Card">
+        <img src="./Assets/IMGS/Animal3.jpg" id="Imagen2" />
+        <input type="text" id="Valor3" />
+      </div>
+    </div>
+    <div id="Verificar">
+      <p id="Resultado"></p>
+      <button
+        onclick="
+        Resultado = document.querySelector('#Resultado')
+        Valor1 = Number(document.querySelector('#Valor1').value)
+        Valor2 = Number(document.querySelector('#Valor2').value)
+        Valor3 = Number(document.querySelector('#Valor3').value)
+        Stickers = Valor1+Valor2+Valor3
+        if (Stickers>=10) {
+            Resultado.innerHTML = 'Llevas demasiados sticker'
+        }else {
+            Resultado.innerHTML = 'Llevas ' +Stickers + ' sticker'}
+        "
+      >
+        Verificar
+      </button>
+    </div>
+    <!---Ejercicio Numero 3-->
+    <h1>Ejercicio 3:</h1>
+    <h1>Ingrese el Pasword</h1>
+    <div id="Ejericio3">
+      <select name="Value1" id="Value1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="Value1" id="Value2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select name="Value1" id="Value3">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <div id="Final">
+      <p id="Final_Plot"></p>
+      <button
+        onclick="
+        Resultado_F = document.querySelector('#Final_Plot')
+        Valor1_F = Number(document.querySelector('#Value1').value)
+        Valor2_F = Number(document.querySelector('#Value2').value)
+        Valor3_F = Number(document.querySelector('#Value3').value)
+        if(Valor1_F==9 && Valor2_F==1 && Valor3_F==1){
+            Resultado_F.innerHTML = 'password 1 correcto'
+        }
+        else if(Valor1_F==7 && Valor2_F==1 && Valor3_F==4){
+            Resultado_F.innerHTML = 'password 2 correcto'
+        }else{Resultado_F.innerHTML = 'password incorrecto'}
+        "
+      >
+        Verificar
+      </button>
+    </div>
+  </body>
+</html>
